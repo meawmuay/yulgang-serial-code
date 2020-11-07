@@ -54,6 +54,7 @@ namespace Yulgang_Serial_Code
             _runIndex = 0;
             _codes = null;
             _indexes = null;
+            Running = false;
         }
 
         public void Run(IntPtr handleWindow, SerialCode.GameWindow gameWindow)
