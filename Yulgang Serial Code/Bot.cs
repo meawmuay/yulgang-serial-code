@@ -57,7 +57,7 @@ namespace Yulgang_Serial_Code
             Running = false;
         }
 
-        public void Run(IntPtr handleWindow, SerialCode.GameWindow gameWindow)
+        public void Run(IntPtr handleWindow, SerialCode.GameWindow gameWindow,Boolean npcZoom)
         {
 
             if( Running )
@@ -90,20 +90,49 @@ namespace Yulgang_Serial_Code
                 RunCode = code;
                 RunIndex = index;
 
-                var serialCode  = new SerialCode(handleWindow);
+                //Check code empty
+                if (code == "" || code.Trim() == "" || code == " ")
+                {
+                    Console.WriteLine(@"Skip code empty");
+                }
+                else
+                {
+                    var serialCode  = new SerialCode(handleWindow);
 
-                //Talk NPC
-                serialCode.NpcSelection();
-                Thread.Sleep(1000);
-                //Open window for put code
-                serialCode.OpenWindow(gameWindow);
-                Thread.Sleep(500);
-                //Typing code
-                serialCode.Code(code);
-                Thread.Sleep(500);
-                //Enter code
-                serialCode.Enter();
-                Thread.Sleep(500);
+                    //Talk NPC
+                    serialCode.NpcSelection();
+
+                    //Sleep for NPC
+                    if (npcZoom)
+                    {
+                        Thread.Sleep(2500);
+                    }
+                    else
+                    {
+                        Thread.Sleep(1000);
+                    }
+
+                    //Open window for put code
+                    serialCode.OpenWindow(gameWindow);
+                    Thread.Sleep(500);
+
+                    //Typing code
+                    serialCode.Code(code);
+                    Thread.Sleep(500);
+
+                    //Enter code
+                    serialCode.Enter();
+
+                    //Sleep for close NPC
+                    if ( npcZoom )
+                    {
+                        Thread.Sleep(1500);
+                    }
+                    else
+                    {
+                        Thread.Sleep(500);
+                    }
+                }
 
                 _runIndex++;
                 //Clear running

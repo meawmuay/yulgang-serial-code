@@ -42,6 +42,7 @@ namespace Yulgang_Serial_Code
             }
 
             comboBoxGameWindow.SelectedIndex = 0;
+            comboBoxNpcZoom.SelectedIndex = 0;
 
         }
         private void timerTyping_Tick(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace Yulgang_Serial_Code
                 Status("บอทกำลังทำงาน...");
                 //Bot
                 SerialCode.GameWindow gameWindow = SerialCode.GameWindowList()[comboBoxGameWindow.SelectedIndex];
-                _bot.Run(handleWindow, gameWindow);
+                _bot.Run(handleWindow, gameWindow, comboBoxNpcZoom.SelectedIndex == 0);
             }
             //Update Status
             UpdateStatus();
@@ -78,6 +79,12 @@ namespace Yulgang_Serial_Code
 
         private void Start()
         {
+            //Warning
+            MessageBox.Show(@"หลังจากเลือกหน้าจอเกม กรุณาอย่าขยับเมาส์หรือใช้งานคีย์บอร์ด เพราะโปรแกรมจะทำงานให้คุณแทน", 
+                @"คำแนะนำ", 
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
             Console.WriteLine("START");
             Status("เริ่มทำงาน...");
 
@@ -85,14 +92,15 @@ namespace Yulgang_Serial_Code
             buttonStop.Enabled = true;
             textBoxSerialCode.Enabled = false;
             comboBoxGameWindow.Enabled = false;
+            comboBoxNpcZoom.Enabled = false;
 
             _bot.Reset();
             UpdateStatus();
             SetIndex();
             _bot.SetCode(textBoxSerialCode.Text);
             timerTyping.Start();
-
         }
+
         private void Stop()
         {
             Console.WriteLine("STOP");
@@ -101,6 +109,7 @@ namespace Yulgang_Serial_Code
             buttonStart.Enabled = true;
             textBoxSerialCode.Enabled = true;
             comboBoxGameWindow.Enabled = true;
+            comboBoxNpcZoom.Enabled = true;
             timerTyping.Stop();
         }
 

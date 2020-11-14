@@ -34,19 +34,21 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.comboBoxGameWindow = new System.Windows.Forms.ComboBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.labelCodeIndex = new System.Windows.Forms.Label();
+            this.labelCode = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timerTyping = new System.Windows.Forms.Timer(this.components);
             this.buttonStop = new System.Windows.Forms.Button();
             this.buttonIndex = new System.Windows.Forms.Button();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelCode = new System.Windows.Forms.Label();
-            this.labelCodeIndex = new System.Windows.Forms.Label();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxNpcZoom = new System.Windows.Forms.ComboBox();
             this.groupBox.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -94,11 +96,33 @@
             this.groupBox.Controls.Add(this.label5);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.groupBox.Location = new System.Drawing.Point(210, 60);
+            this.groupBox.Location = new System.Drawing.Point(210, 84);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(239, 74);
             this.groupBox.TabIndex = 3;
             this.groupBox.TabStop = false;
+            // 
+            // labelCodeIndex
+            // 
+            this.labelCodeIndex.AutoSize = true;
+            this.labelCodeIndex.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.labelCodeIndex.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelCodeIndex.Location = new System.Drawing.Point(86, 46);
+            this.labelCodeIndex.Name = "labelCodeIndex";
+            this.labelCodeIndex.Size = new System.Drawing.Size(13, 14);
+            this.labelCodeIndex.TabIndex = 3;
+            this.labelCodeIndex.Text = "?";
+            // 
+            // labelCode
+            // 
+            this.labelCode.AutoSize = true;
+            this.labelCode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.labelCode.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelCode.Location = new System.Drawing.Point(86, 20);
+            this.labelCode.Name = "labelCode";
+            this.labelCode.Size = new System.Drawing.Size(13, 14);
+            this.labelCode.TabIndex = 2;
+            this.labelCode.Text = "?";
             // 
             // label5
             // 
@@ -159,6 +183,12 @@
             this.statusStrip.TabIndex = 6;
             this.statusStrip.Text = "statusStrip1";
             // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -168,34 +198,6 @@
             this.label3.Size = new System.Drawing.Size(85, 14);
             this.label3.TabIndex = 2;
             this.label3.Text = "Game window";
-            // 
-            // labelCode
-            // 
-            this.labelCode.AutoSize = true;
-            this.labelCode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.labelCode.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelCode.Location = new System.Drawing.Point(86, 20);
-            this.labelCode.Name = "labelCode";
-            this.labelCode.Size = new System.Drawing.Size(13, 14);
-            this.labelCode.TabIndex = 2;
-            this.labelCode.Text = "?";
-            // 
-            // labelCodeIndex
-            // 
-            this.labelCodeIndex.AutoSize = true;
-            this.labelCodeIndex.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.labelCodeIndex.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelCodeIndex.Location = new System.Drawing.Point(86, 46);
-            this.labelCodeIndex.Name = "labelCodeIndex";
-            this.labelCodeIndex.Size = new System.Drawing.Size(13, 14);
-            this.labelCodeIndex.TabIndex = 3;
-            this.labelCodeIndex.Text = "?";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // menuStrip1
             // 
@@ -225,11 +227,36 @@
             this.ToolStripMenuItemUpdate.Text = "อัปเดต";
             this.ToolStripMenuItemUpdate.Click += new System.EventHandler(this.ToolStripMenuItemUpdate_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(209, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 14);
+            this.label2.TabIndex = 101;
+            this.label2.Text = "NPC";
+            // 
+            // comboBoxNpcZoom
+            // 
+            this.comboBoxNpcZoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNpcZoom.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.comboBoxNpcZoom.FormattingEnabled = true;
+            this.comboBoxNpcZoom.Items.AddRange(new object[] {
+            "ZOOM",
+            "NORMAL"});
+            this.comboBoxNpcZoom.Location = new System.Drawing.Point(302, 61);
+            this.comboBoxNpcZoom.Name = "comboBoxNpcZoom";
+            this.comboBoxNpcZoom.Size = new System.Drawing.Size(147, 22);
+            this.comboBoxNpcZoom.TabIndex = 102;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 250);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxNpcZoom);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
@@ -279,6 +306,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAbout;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUpdate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxNpcZoom;
     }
 }
 
