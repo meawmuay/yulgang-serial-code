@@ -1,6 +1,6 @@
 # Yulgang ช่วยกรอกโค้ดรับไอเท็ม
 
-![](https://i.imgur.com/jFbpQom.png)
+![](https://i.imgur.com/0IUTS8V.png)
 
 โปรแกรมนี้จัดทำขึ้นมาให้ใช้ฟรี เพื่อช่วยให้การกรอกโค้ดรับไอเท็มไม่ต้องเสียเวลา และยังสะดวกสบาย
 
@@ -14,7 +14,7 @@
 
 โปรแกรมนี้เขียนด้วยโปรแกรม Visual Studio 2017 และใช้ .NET Framework เวอร์ชั่น 4.6.0 เป็นอย่างต่ำ
 ### ดาวน์โหลด
-[Yulgang Serial Code Version 1.0.0.1](https://github.com/meawmuay/yulgang-serial-code/releases/download/v1.0.0.1/Yulgang.Serial.Code.1.0.0.1.rar "Yulgang Lighting Latest Version")
+[Yulgang Serial Code Version 1.0.0.2](https://github.com/meawmuay/yulgang-serial-code/releases/download/v1.0.0.2/Yulgang.Serial.Code.1.0.0.2.rar "Yulgang Lighting Latest Version")
 
 ### ติดตั้ง
 ตัวโปรแกรมไม่มีความจำเป็นต้องติด แต่หากคุณยังไม่ได้ลง .NET Framework เวอร์ชั่น 4.0.0 หรือมากกว่า ดาวน์โหลดได้จากลิงค์ด้านล่าง
@@ -34,7 +34,7 @@
 1. เปิดเกม แล้วตั้งขนาดหน้าเจอ ตามที่โปรแกรมมีให้เลือก โดยต้องเปิด Window Mode ด้วย
 2. ไปยืนข้าง ๆ NPC ชอนอู
 3. เปิดไฟล์ Yulgang Serial.exe เพื่อเข้าใช้งาน\
-   ![](https://i.imgur.com/jFbpQom.png)
+   ![](https://i.imgur.com/0IUTS8V.png)
 
 4. หลังจากนั้นแทนที่ข้อความในช่องใส่โค้ดเป็นโค้ดของคุณเอง 1 โค้ด ต่อ 1 บรรทัด
 5. ปุ่ม SET INDEX จะช่วยตั้งลำดับของโค้ด จะกดไม่กดก็ได้
