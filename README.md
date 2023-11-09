@@ -14,12 +14,12 @@
 
 โปรแกรมนี้เขียนด้วยโปรแกรม Visual Studio 2017 และใช้ .NET Framework เวอร์ชั่น 4.6.0 เป็นอย่างต่ำ
 ### ดาวน์โหลด
-[Yulgang Serial Code Version 1.0.0.2](https://github.com/meawmuay/yulgang-serial-code/releases/download/v1.0.0.2/Yulgang.Serial.Code.1.0.0.2.rar "Yulgang Lighting Latest Version")
+[Yulgang Serial Code Version 1.0.0.3](https://github.com/meawmuay/yulgang-serial-code/releases/download/v1.0.0.3/Yulgang.Serial.Code.1.0.0.3.rar "Yulgang Lighting Latest Version")
 
 ### ติดตั้ง
-ตัวโปรแกรมไม่มีความจำเป็นต้องติด แต่หากคุณยังไม่ได้ลง .NET Framework เวอร์ชั่น 4.0.0 หรือมากกว่า ดาวน์โหลดได้จากลิงค์ด้านล่าง
+ตัวโปรแกรมไม่มีความจำเป็นต้องติด แต่หากคุณยังไม่ได้ลง .NET Framework เวอร์ชั่น 4.8 หรือมากกว่า ดาวน์โหลดได้จากลิงค์ด้านล่าง
 
-[Microsoft .NET Framework 4.6.1 (Web Installer)](https://www.microsoft.com/en-us/download/details.aspx?id=49981 "Microsoft .NET Framework 4.6.1 (Web Installer)")
+[Microsoft .NET Framework 4.8 (Web Installer)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer "Microsoft .NET Framework 4.8 (Web Installer)")
 
 รองรับระบบปฏิบัติการ
 - Windows 7 SP1
