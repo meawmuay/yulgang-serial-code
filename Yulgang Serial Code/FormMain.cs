@@ -36,13 +36,14 @@ namespace Yulgang_Serial_Code
             _bot = new Bot();
 
             //Game Window
-            foreach (SerialCode.GameWindow gameWindow in SerialCode.GameWindowList() )
+            foreach (SerialCode.GameWindow gameWindow in SerialCode.GameWindowList(0) )
             {
                 comboBoxGameWindow.Items.Add(gameWindow.Width.ToString() + "x"+gameWindow.Height.ToString());
             }
 
             comboBoxGameWindow.SelectedIndex = 0;
             comboBoxNpcZoom.SelectedIndex = 0;
+            comboBoxNpcMenu.SelectedIndex = 1;
 
         }
         private void timerTyping_Tick(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace Yulgang_Serial_Code
             {
                 Status("บอทกำลังทำงาน...");
                 //Bot
-                SerialCode.GameWindow gameWindow = SerialCode.GameWindowList()[comboBoxGameWindow.SelectedIndex];
+                SerialCode.GameWindow gameWindow = SerialCode.GameWindowList(comboBoxNpcMenu.SelectedIndex)[comboBoxGameWindow.SelectedIndex];
                 _bot.Run(handleWindow, gameWindow, comboBoxNpcZoom.SelectedIndex == 0);
             }
             //Update Status

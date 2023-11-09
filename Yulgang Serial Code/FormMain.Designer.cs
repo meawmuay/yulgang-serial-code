@@ -49,6 +49,8 @@
             this.ToolStripMenuItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxNpcZoom = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxNpcMenu = new System.Windows.Forms.ComboBox();
             this.groupBox.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -62,7 +64,7 @@
             this.textBoxSerialCode.Name = "textBoxSerialCode";
             this.textBoxSerialCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBoxSerialCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxSerialCode.Size = new System.Drawing.Size(185, 182);
+            this.textBoxSerialCode.Size = new System.Drawing.Size(185, 195);
             this.textBoxSerialCode.TabIndex = 99;
             this.textBoxSerialCode.Text = "# ใส่ Code ที่นี่\r\n# 1 โค้ด ต่อ 1 บรรทัด";
             this.textBoxSerialCode.WordWrap = false;
@@ -70,7 +72,7 @@
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.buttonStart.Location = new System.Drawing.Point(302, 177);
+            this.buttonStart.Location = new System.Drawing.Point(304, 190);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(85, 40);
             this.buttonStart.TabIndex = 0;
@@ -96,7 +98,7 @@
             this.groupBox.Controls.Add(this.label5);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.groupBox.Location = new System.Drawing.Point(210, 84);
+            this.groupBox.Location = new System.Drawing.Point(212, 110);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(239, 74);
             this.groupBox.TabIndex = 3;
@@ -153,7 +155,7 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(393, 177);
+            this.buttonStop.Location = new System.Drawing.Point(395, 190);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(56, 40);
             this.buttonStop.TabIndex = 1;
@@ -164,7 +166,7 @@
             // buttonIndex
             // 
             this.buttonIndex.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.buttonIndex.Location = new System.Drawing.Point(210, 177);
+            this.buttonIndex.Location = new System.Drawing.Point(212, 190);
             this.buttonIndex.Name = "buttonIndex";
             this.buttonIndex.Size = new System.Drawing.Size(79, 40);
             this.buttonIndex.TabIndex = 5;
@@ -176,7 +178,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 228);
+            this.statusStrip.Location = new System.Drawing.Point(0, 237);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(461, 22);
             this.statusStrip.SizingGrip = false;
@@ -250,11 +252,38 @@
             this.comboBoxNpcZoom.Size = new System.Drawing.Size(147, 22);
             this.comboBoxNpcZoom.TabIndex = 102;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label4.Location = new System.Drawing.Point(208, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 14);
+            this.label4.TabIndex = 103;
+            this.label4.Text = "NPC Menu";
+            // 
+            // comboBoxNpcMenu
+            // 
+            this.comboBoxNpcMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNpcMenu.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.comboBoxNpcMenu.FormattingEnabled = true;
+            this.comboBoxNpcMenu.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBoxNpcMenu.Location = new System.Drawing.Point(301, 89);
+            this.comboBoxNpcMenu.Name = "comboBoxNpcMenu";
+            this.comboBoxNpcMenu.Size = new System.Drawing.Size(147, 22);
+            this.comboBoxNpcMenu.TabIndex = 104;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 250);
+            this.ClientSize = new System.Drawing.Size(461, 259);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxNpcMenu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxNpcZoom);
             this.Controls.Add(this.label3);
@@ -308,6 +337,8 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUpdate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxNpcZoom;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxNpcMenu;
     }
 }
 

@@ -36,16 +36,38 @@ namespace Yulgang_Serial_Code
             public int Height { get; set; }
             public int X { get; set; }
             public int Y { get; set; }
+
         }
 
-        public static List<GameWindow> GameWindowList()
+        public static List<GameWindow> GameWindowList(int menuIndex)
         {
+
+            int yAddpend = 0;
+
+            if (menuIndex == 0)
+            {
+                yAddpend = 0;
+            }
+            else if (menuIndex == 1)
+            {
+                yAddpend = 45;
+            }
+            else if (menuIndex == 2)
+            {
+                yAddpend = 90;
+            }
+            else if (menuIndex == 3)
+            {
+                yAddpend = 135;
+            }
+
+
             List<GameWindow> list = new List<GameWindow>
             {
-                new GameWindow() { Width = 1600, Height = 900, X = 1161, Y = 500 },
-                new GameWindow() { Width = 1360, Height = 768, X = 1010, Y = 480 },
-                new GameWindow() { Width = 1024, Height = 768, X = 795, Y = 480 },
-                new GameWindow() { Width = 800, Height = 600, X = 653, Y = 380 }
+                new GameWindow() { Width = 1600, Height = 900, X = 1161, Y = 450 + yAddpend },
+                new GameWindow() { Width = 1360, Height = 768, X = 1010, Y = 430 + yAddpend },
+                new GameWindow() { Width = 1024, Height = 768, X = 795, Y = 430 + yAddpend },
+                new GameWindow() { Width = 800, Height = 600, X = 653, Y = 330 + yAddpend }
             };
 
             return list;
@@ -94,8 +116,8 @@ namespace Yulgang_Serial_Code
             SetForegroundWindow(handleWindow);
             var windowRect = FindPosition(handleWindow);
 
-            x = ( windowRect.Left + x ) * 65535 / _screenWidth;
-            y = ( windowRect.Top + y ) * 65535 / _screenHeight;
+            x = (windowRect.Left + x) * 65535 / _screenWidth;
+            y = (windowRect.Top + y) * 65535 / _screenHeight;
 
             _input.Mouse.MoveMouseTo(x, y);
         }
